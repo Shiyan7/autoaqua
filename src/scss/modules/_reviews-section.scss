@@ -228,7 +228,9 @@
     }
   }
 
-  &__title {
+  &__title.g-title {
+    font-size: 60px;
+    line-height: 72px;
     margin-bottom: 23px;
   }
 
