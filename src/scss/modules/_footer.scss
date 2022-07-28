@@ -221,11 +221,25 @@
     line-height: 16.8px;
     color: var(--color-gray);
 
+    a {
+      color: var(--color-gray);
+      transition: color 0.3s;
+
+      &:hover {
+        color: var(--color-text);
+      }
+    }
+
+    span {
+      display: block;
+      margin-right: 10px;
+    }
+
     svg {
       display: block;
       width: 52px;
       height: 11px;
-      margin-left: 10px;
+      fill: currentColor;
     }
   }
 }
