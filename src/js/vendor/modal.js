@@ -149,23 +149,27 @@ export class Modal {
   }
 
   disableScroll() {
-    let pagePosition = window.scrollY;
-    this.lockPadding();
-    document.body.classList.add('dis-scroll');
-    document.body.dataset.position = pagePosition;
-    document.body.style.top = -pagePosition + 'px';
+    if(!document.querySelector(".menu--active")) {
+      let pagePosition = window.scrollY;
+      this.lockPadding();
+      document.body.classList.add('dis-scroll');
+      document.body.dataset.position = pagePosition;
+      document.body.style.top = -pagePosition + 'px';
+    }
   }
 
   enableScroll() {
-    let pagePosition = parseInt(document.body.dataset.position, 10);
-    this.unlockPadding();
-    document.body.style.top = 'auto';
-    document.body.classList.remove('dis-scroll');
-    window.scroll({
-      top: pagePosition,
-      left: 0
-    });
-    document.body.removeAttribute('data-position');
+    if(!document.querySelector(".menu--active")) {
+      let pagePosition = parseInt(document.body.dataset.position, 10);
+      this.unlockPadding();
+      document.body.style.top = 'auto';
+      document.body.classList.remove('dis-scroll');
+      window.scroll({
+        top: pagePosition,
+        left: 0
+      });
+      document.body.removeAttribute('data-position');
+    }
   }
 
   lockPadding() {
