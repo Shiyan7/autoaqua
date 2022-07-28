@@ -1,0 +1,51 @@
+.g-btn {
+  --duration: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: underline;
+  font-size: 16px;
+  line-height: 22.4px;
+  color: var(--color-text);
+  padding: 23px 59px 24px;
+  text-decoration-skip-ink: none;
+  background-color: var(--color-white);
+  border: 1px solid transparent;
+  transition: border var(--duration), color var(--duration), background-color var(--duration);
+
+  &:hover {
+    svg {
+      transform: translateX(2px);
+    }
+  }
+
+  &--stroke {
+    border-color: var(--color-white);
+    background-color: transparent;
+    color: var(--color-white);
+
+    &:hover {
+      border-color: var(--color-main);
+      background-color: var(--color-main);
+    }
+  }
+
+  &--fill {
+    color: var(--color-white);
+    border-color: var(--color-main);
+    background-color: var(--color-main);
+
+    &:hover {
+      border-color: var(--color-main-dark);
+      background-color: var(--color-main-dark);
+    }
+  }
+
+  svg {
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin-left: 15px;
+    fill: currentColor;
+    transition: transform 0.3s;
+  }
+}

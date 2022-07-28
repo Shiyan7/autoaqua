@@ -1,0 +1,40 @@
+.mail {
+  display: flex;
+  flex-direction: column;
+  color: var(--color-white);
+
+  &__caption {
+    display: block;
+    font-size: 12px;
+    line-height: 16.8px;
+    color: inherit;
+    margin-bottom: 5px;
+
+    @media (max-width: 1750px) {
+      margin-bottom: 3px;
+    }
+  }
+
+  &__link {
+    font-size: 24px;
+    line-height: 33.6px;
+    font-weight: 600;
+    color: inherit;
+    transition: color 0.3s;
+    text-decoration: underline;
+
+    @media (max-width: 1750px) {
+      font-size: 22px;
+      line-height: 30px;
+    }
+
+    @media (max-width: 1500px) {
+      font-size: 20px;
+      line-height: 28px;
+    }
+
+    &:hover {
+      color: rgba(#fff, 0.7);
+    }
+  }
+}

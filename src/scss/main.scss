@@ -1,0 +1,11 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// include components
+@import "./components/components";
+
+// include modules
+@import "./modules/modules";

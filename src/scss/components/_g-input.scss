@@ -1,0 +1,35 @@
+.g-input {
+  display: flex;
+  flex-direction: column;
+
+  &--textarea {
+    .g-input__input {
+      resize: none;
+      height: 201px;
+
+      @media (max-width: 576px) {
+        height: 111px;
+      }
+    }
+  }
+
+  &__caption {
+    display: inline-block;
+    color: var(--color-gray);
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 22.4px;
+  }
+
+  &__input {
+    font-size: 16px;
+    line-height: 25.6px;
+    border: 1px solid var(--color-porcelain);
+    color: var(--color-text);
+    padding: 25px 35px;
+
+    &::placeholder {
+      color: rgba(#2c3039, 0.5);
+    }
+  }
+}

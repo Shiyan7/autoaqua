@@ -1,0 +1,20 @@
+:root {
+  // base
+  --font-family: "Roboto", sans-serif;
+  --content-width: 1420px;
+  --container-offset: 20px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --color-white: #fff;
+  --color-porcelain: #f0f1f2;
+  --color-gray: #6c7680;
+  --color-text: #2c3039;
+  --color-black: #000;
+  --color-main: #2e4d99;
+  --color-main-dark: #253763;
+
+  // other
+
+  --border: 1px solid rgba(255, 255, 255, 0.2);
+}

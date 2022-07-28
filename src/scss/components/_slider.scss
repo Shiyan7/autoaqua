@@ -1,0 +1,52 @@
+.slider {
+
+  &-nav {
+    display: flex;
+    align-items: center;
+
+    &__btn {
+      width: 24px;
+      height: 24px;
+      color: var(--color-white);
+      transition: color 0.3s;
+
+      &.swiper-button-disabled {
+        color: rgba(#fff, 0.2);
+        pointer-events: none;
+      }
+
+      &:hover {
+        color: rgba(#fff, 0.8);
+      }
+
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+
+      svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        fill: currentColor;
+      }
+    }
+  }
+
+  &-scrollbar {
+    width: 131px;
+    height: 1px;
+    background: rgba(#fff, 0.2);
+
+    .swiper-scrollbar-drag {
+      height: 1px;
+      background-color: var(--color-white);
+    }
+  }
+
+  &-pagination {
+    font-size: 16px;
+    line-height: 25.6px;
+    color: var(--color-white);
+  }
+}
