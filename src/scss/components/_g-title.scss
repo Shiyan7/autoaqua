@@ -27,6 +27,11 @@
       line-height: 62px;
     }
 
+    @media (max-width: 768px) {
+      font-size: 45px;
+      line-height: 52px;
+    }
+
     @media (max-width: 576px) {
       font-size: 40px;
       line-height: 48px;
