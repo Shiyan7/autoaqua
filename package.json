@@ -3,6 +3,7 @@
   "version": "2.0.4",
   "description": "gulp-builder for weblayout",
   "main": "gulpfile.js",
+  "homepage": "https://shiyan7.github.io/autoaqua/",
   "scripts": {
     "html": "node-w3c-validator -f lint -evH -i app/**/*.html",
     "dev": "gulp",
@@ -10,7 +11,9 @@
     "cache": "gulp cache",
     "backend": "gulp backend",
     "zip": "gulp zip",
-    "code": "editorconfig-checker"
+    "code": "editorconfig-checker",
+    "deploy": "gh-pages -d app",
+    "predeploy": "npm run build"
   },
   "author": "MaxGraph",
   "license": "ISC",

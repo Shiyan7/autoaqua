@@ -3,7 +3,7 @@
   font-family: "Akrobat", sans-serif;
   font-weight: 700;
 
-  &--lg {
+  &--xl {
     font-size: 80px;
     line-height: 88px;
 
@@ -18,9 +18,34 @@
     }
   }
 
-  &--md {
+  &--lg {
     font-size: 60px;
     line-height: 72px;
+
+    @media (max-width: 1280px) {
+      font-size: 50px;
+      line-height: 62px;
+    }
+
+    @media (max-width: 576px) {
+      font-size: 40px;
+      line-height: 48px;
+    }
+  }
+
+  &--md {
+    font-size: 36px;
+    line-height: 43.2px;
+
+    @media (max-width: 1280px) {
+      font-size: 32px;
+      line-height: 38px;
+    }
+
+    @media (max-width: 576px) {
+      font-size: 28px;
+      line-height: 33.6px;
+    }
   }
 
   &--sm {
