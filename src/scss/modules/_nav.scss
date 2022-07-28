@@ -37,11 +37,6 @@
     padding: 19px 0 21px;
     color: var(--color-white);
     font-weight: 400;
-    transition: color 0.3s;
-
-    &:hover {
-      color: rgba(#fff, 0.7);
-    }
 
     &--dropdown {
       transition: background-color 0.2s ease-in-out;

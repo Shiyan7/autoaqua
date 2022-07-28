@@ -64,7 +64,7 @@
   }
 
   &__title {
-    margin-bottom: 20px;
+    margin-bottom: 26px;
 
     @media (max-width: 1024px) {
       margin-bottom: 0;
@@ -78,10 +78,12 @@
 
   &__right {
     grid-column: 5 span;
+    padding-top: 5px;
 
     @media (max-width: 1024px) {
       display: grid;
       column-gap: 40px;
+      padding-top: 0;
       grid-template-columns: repeat(2, 1fr);
     }
 

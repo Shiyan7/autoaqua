@@ -1,89 +1,75 @@
-.services-section {
+.works-section {
   &__container {
-    padding-top: 114px;
-    padding-bottom: 115px;
+    position: relative;
+    padding-bottom: 224px;
+
+    @media (max-width: 1280px) {
+      padding-bottom: 170px;
+    }
 
     @media (max-width: 1024px) {
-      padding-top: 90px;
-      padding-bottom: 90px;
+      padding-bottom: 100px;
     }
 
     @media (max-width: 576px) {
-      padding-top: 80px;
-      padding-bottom: 75px;
+      padding-bottom: 80px;
     }
   }
 
   &__title {
     margin-bottom: 55px;
 
-    @media (max-width: 1280px) {
+    @media (max-width: 768px) {
       margin-bottom: 40px;
     }
+
+    @media (max-width: 576px) {
+      margin-bottom: 26px;
+    }
   }
-}
 
-.services-slider {
-  overflow: visible;
+  &__link {
+    position: absolute;
+    top: 44px;
+    right: var(--container-offset);
 
-  .swiper-slide {
     @media (max-width: 1024px) {
-      width: 350px;
+      top: 25px;
     }
 
     @media (max-width: 768px) {
-      width: 300px;
-    }
-
-    @media (max-width: 576px) {
-      width: 280px;
-    }
-  }
-
-  @media (max-width: 1024px) {
-    overflow: visible;
-  }
-
-  &__bottom {
-    display: flex;
-    align-items: center;
-    margin-top: 50px;
-
-    @media (min-width: 769px) {
-      display: none;
-    }
-  }
-
-  &__nav {
-    margin-right: 50px;
-  }
-
-  &__scrollbar {
-    width: 300px;
-
-    @media (max-width: 576px) {
-      max-width: 100%;
-      width: 100%;
+      position: static;
+      margin-top: 30px;
     }
   }
 }
 
-.service-item {
+.works-list {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+
+  @media (max-width: 576px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.work-item {
   position: relative;
-  padding: 40px;
-  height: 570px;
+  padding: 60px 80px;
+  height: 405px;
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
 
   @media (max-width: 1280px) {
-    height: 450px;
+    height: 350px;
     padding: 30px;
   }
 
   @media (max-width: 576px) {
-    height: 500px;
-    padding: 20px 30px;
+    height: 205px;
+    padding: 50px 30px 20px;
   }
 
   &:hover {
@@ -91,11 +77,11 @@
       background-color: rgba(#2e4d99, 0.95);
     }
 
-    .service-item__content {
+    .work-item__content {
       transform: translateY(0px);
     }
 
-    .service-item__link {
+    .work-item__link {
       opacity: 1;
       visibility: visible;
     }
@@ -143,6 +129,11 @@
     font-size: 16px;
     line-height: 25.6px;
     color: var(--color-white);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 
     @media (max-width: 1280px) {
       font-size: 15px;
