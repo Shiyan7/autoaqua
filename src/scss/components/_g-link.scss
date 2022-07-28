@@ -6,6 +6,10 @@
   line-height: 22.4px;
   color: var(--color-main);
 
+  &--black {
+    color: var(--color-text);
+  }
+
   &:hover {
     svg {
       transform: translateX(2px);
