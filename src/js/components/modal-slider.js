@@ -6,6 +6,8 @@ modalsSlider.forEach(el => {
 
   const main = el.querySelector(".modal-slider__main")
   const nav = el.querySelector(".modal-slider__nav")
+  const prevEl = el.querySelector(".modal-slider__btn--prev")
+  const nextEl = el.querySelector(".modal-slider__btn--next")
 
   const modalSliderNav = new Swiper(nav, {
     slidesPerView: 'auto',
@@ -16,10 +18,7 @@ modalsSlider.forEach(el => {
     modules: [Navigation, Thumbs],
     slidesPerView: 1,
     spaceBetween: 40,
-    navigation: {
-      prevEl: '.modal-slider__btn--prev',
-      nextEl: '.modal-slider__btn--next',
-    },
+    navigation: {prevEl, nextEl},
     thumbs: {
       swiper: modalSliderNav,
     }
