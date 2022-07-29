@@ -34,7 +34,7 @@ a {
 }
 
 .site-container {
-  overflow: hidden;
+  overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
 }
 
 .btn-reset {
@@ -93,15 +93,5 @@ a {
 }
 
 .dis-scroll {
-  position: fixed;
-  left: 0;
-  top: 0;
   overflow: hidden;
-  width: 100%;
-  height: 100vh;
-  overscroll-behavior: none;
-}
-
-.page--ios .dis-scroll {
-  position: relative;
 }
