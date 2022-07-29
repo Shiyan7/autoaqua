@@ -1,0 +1,151 @@
+.history {
+  overflow: hidden;
+
+  &__container {
+    padding-bottom: 123px;
+    padding-left: max(15px, calc((100% - var(--content-width)) / 2));
+
+    @media (max-width: 1024px) {
+      padding: 0 var(--container-offset) 90px;
+    }
+
+    @media (max-width: 576px) {
+      padding-bottom: 80px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 56px;
+    padding-left: 480px;
+
+    @media (max-width: 1024px) {
+      padding-left: 0;
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 576px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+    }
+  }
+
+  &__desc {
+    margin: 0;
+    line-height: 26px;
+    color: var(--color-gray);
+    margin-bottom: 50px;
+    margin-right: 140px;
+    max-width: 340px;
+    width: 100%;
+    flex-shrink: 0;
+
+    @media (max-width: 1200px) {
+      margin-right: 50px;
+    }
+
+    @media (max-width: 1024px) {
+      max-width: 100%;
+      margin-bottom: 40px;
+      margin-right: 0;
+    }
+
+    @media (max-width: 576px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &-slider {
+    padding-right: var(--container-offset);
+
+    @media (max-width: 1024px) {
+      overflow: visible;
+      width: 100%;
+      margin-bottom: 30px;
+      padding-right: 0;
+    }
+
+    .swiper-slide {
+      width: auto;
+
+      &:not(:last-child) {
+        .history-item {
+          @media (max-width: 576px) {
+            border-right: none;
+          }
+        }
+      }
+    }
+
+    &__bottom {
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      display: flex;
+      align-items: center;
+
+      @media (max-width: 1024px) {
+        position: static;
+      }
+    }
+
+    &__nav {
+      margin-right: 50px;
+    }
+
+    &__scrollbar {
+      width: 100%;
+
+      @media (max-width: 1024px) {
+        width: 50%;
+      }
+
+      @media (max-width: 576px) {
+        width: 100%;
+      }
+    }
+  }
+
+  &-item {
+    display: inline-block;
+    padding: 35px 37px 40px 40px;
+    border: 1px solid var(--color-porcelain);
+    cursor: pointer;
+
+    @media (max-width: 576px) {
+      padding: 30px;
+      padding-bottom: 20px;
+    }
+
+    &__title {
+      margin-bottom: 103px;
+
+      @media (max-width: 576px) {
+        margin-bottom: 50px;
+        font-size: 36px;
+        line-height: 43.2px;
+      }
+    }
+
+    &__desc {
+      margin: 0;
+      max-width: 380px;
+      line-height: 25.6px;
+
+      @media (max-width: 1200px) {
+        max-width: 340px;
+      }
+
+      @media (max-width: 576px) {
+        max-width: 220px;
+      }
+    }
+  }
+}

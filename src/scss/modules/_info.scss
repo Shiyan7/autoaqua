@@ -1,13 +1,5 @@
 .info {
 
-  &__container {
-    padding-bottom: 100px;
-
-    @media (max-width: 576px) {
-      padding-bottom: 95px;
-    }
-  }
-
   &__title {
     margin: 0;
     font-weight: 600;

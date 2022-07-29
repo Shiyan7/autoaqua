@@ -21,7 +21,7 @@ export const validateForms = (selector, rules, modalSelector, afterSend) => {
       if(item.tel) {
         item.rules.push({
           rule: 'function',
-          errorMessage: 'Введите коррктный номер телефона',
+          errorMessage: 'Введите корректный номер телефона',
           validator: function() {
             const phone = telSelector.inputmask.unmaskedvalue();
             return phone.length >= 10;

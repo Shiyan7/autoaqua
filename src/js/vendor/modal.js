@@ -1,3 +1,6 @@
+import {disableScroll} from '../functions/disable-scroll'
+import {enableScroll} from '../functions/enable-scroll'
+
 export class Modal {
   constructor(options) {
     let defaultOptions = {
@@ -150,31 +153,14 @@ export class Modal {
 
   disableScroll() {
     if(!document.querySelector(".menu--active")) {
-      this.lockPadding();
-      document.body.classList.add('dis-scroll');
+      disableScroll()
     }
   }
 
   enableScroll() {
     if(!document.querySelector(".menu--active")) {
-      this.unlockPadding();
-      document.body.classList.remove('dis-scroll');
+      enableScroll()
     }
-  }
-
-  lockPadding() {
-    let paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
-    this._fixBlocks.forEach((el) => {
-      el.style.paddingRight = paddingOffset;
-    });
-    document.body.style.paddingRight = paddingOffset;
-  }
-
-  unlockPadding() {
-    this._fixBlocks.forEach((el) => {
-      el.style.paddingRight = '0px';
-    });
-    document.body.style.paddingRight = '0px';
   }
 }
 

@@ -8,6 +8,10 @@
       .slider-nav__btn {
         color: var(--color-main);
 
+        &:hover {
+          color: rgba(#2c3039, 0.5);
+        }
+
         &.swiper-button-disabled {
           color: var(--color-gray);
         }
