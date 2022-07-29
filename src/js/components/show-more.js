@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.remove()
   }
 
-  showMoreWrappers.forEach(el => {
+  showMoreWrappers?.forEach(el => {
     const btn = el.querySelector(".show-more__btn");
     const content = el.querySelector(".show-more__content")
 
