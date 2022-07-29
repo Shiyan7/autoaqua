@@ -1,6 +1,5 @@
 .modal {
   --transition-time: 0.3s;
-  --drawer-width: 500px;
   position: fixed;
   left: 0;
   top: 0;
@@ -13,10 +12,6 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity var(--transition-time), visibility var(--transition-time);
-
-  @media (max-width: 576px) {
-    --drawer-width: 100%;
-  }
 
   &.is-open {
     opacity: 1;
@@ -35,7 +30,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: var(--drawer-width);
+    width: 500px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -57,6 +52,7 @@
     }
 
     @media (max-width: 576px) {
+      width: 100%;
       transform: translateX(0%);
       opacity: 0;
       visibility: hidden;
@@ -104,11 +100,12 @@
       width: 100%;
 
       @media (max-width: 1280px) {
-        --drawer-width: 430px;
+        .modal__drawer {
+          width: 430px;
+        }
       }
 
       @media (max-width: 1024px) {
-        --drawer-width: 100%;
         flex-direction: column;
         overflow-y: auto;
         overflow-x: hidden;
@@ -120,6 +117,7 @@
         }
 
         .modal__drawer {
+          width: 100%;
           position: static;
           height: auto;
         }
@@ -252,12 +250,20 @@
     z-index: 2;
     top: 0;
     left: 0;
-    width: calc(100% - var(--drawer-width));
+    width: calc(100% - 500px);
     height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
     background-color: #000;
     cursor: default;
+
+    @media (max-width: 1280px) {
+      width: calc(100% - 430px);
+    }
+
+    @media (max-width: 1024px) {
+      width: 100%;
+    }
 
     &__close {
       display: inline-flex;
@@ -422,11 +428,9 @@
     }
 
     &__btn {
-      --offset: 50px;
-      --size: 64px;
       display: inline-flex;
-      width: var(--size);
-      height: var(--size);
+      width: 64px;
+      height: 64px;
       top: 50%;
       position: absolute;
       transform: translateY(-50%);
@@ -438,7 +442,8 @@
 
       @media (max-width: 1500px) {
         --offset: 20px;
-        --size: 50px;
+        width: 50px;
+        height: 50px;
       }
 
       @media (max-width: 1200px) {
@@ -446,15 +451,24 @@
       }
 
       @media (max-width: 576px) {
-        --size: 38px;
+        width: 38px;
+        height: 38px;
       }
 
       &--prev {
-        left: var(--offset);
+        left: 50px;
+
+        @media (max-width: 1500px) {
+          left: 20px;
+        }
       }
 
       &--next {
-        right: var(--offset);
+        right: 50px;
+
+        @media (max-width: 1500px) {
+          right: 20px;
+        }
       }
 
       &:hover {
