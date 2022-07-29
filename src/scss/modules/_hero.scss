@@ -6,6 +6,7 @@
     background-repeat: no-repeat;
     background-position: 51% bottom;
     background-size: cover;
+    height: auto;
   }
 
   &__container {
@@ -16,20 +17,24 @@
     max-width: 1420px;
     padding-top: 290px;
     padding-bottom: 231px;
+    min-height: calc(100% - 521px);
 
     @media (max-width: 1500px) {
       padding-top: 250px;
       padding-bottom: 200px;
+      min-height: calc(100% - 450px);
     }
 
     @media (max-width: 1280px) {
       padding-top: 230px;
       padding-bottom: 130px;
+      min-height: calc(100% - 360px);
     }
 
     @media (max-width: 576px) {
       padding-top: 180px;
       padding-bottom: 135px;
+      min-height: calc(100% - 315px);
     }
   }
 
