@@ -18,10 +18,6 @@
       margin-bottom: 30px;
     }
   }
-
-  &__link {
-
-  }
 }
 
 .licenses-slider {
@@ -63,7 +59,7 @@
 
   &__license {
     display: block;
-    width: 220px;
+    max-width: 220px;
     height: auto;
     margin: 0 auto;
     margin-bottom: 30px;

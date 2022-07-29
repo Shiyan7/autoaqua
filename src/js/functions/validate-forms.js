@@ -2,7 +2,7 @@ import {Modal} from '../vendor/modal';
 import JustValidate from 'just-validate';
 import Inputmask from "inputmask";
 
-export const validateForms = (selector, rules, modalSelector, afterSend) => {
+export const validateForms = (selector, rules) => {
   const form = document?.querySelector(selector);
   const telSelector = form?.querySelector('.mask-input');
   const modal = new Modal()
@@ -36,8 +36,7 @@ export const validateForms = (selector, rules, modalSelector, afterSend) => {
   });
 
   for (let item of rules) {
-    validation
-      .addField(item.ruleSelector, item.rules);
+    validation.addField(item.ruleSelector, item.rules);
   }
 
   validation.onSuccess(event => {
