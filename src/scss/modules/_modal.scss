@@ -1,5 +1,6 @@
 .modal {
   --transition-time: 0.3s;
+  --drawer-width: 500px;
   position: fixed;
   left: 0;
   top: 0;
@@ -13,17 +14,21 @@
   visibility: hidden;
   transition: opacity var(--transition-time), visibility var(--transition-time);
 
+  @media (max-width: 576px) {
+    --drawer-width: 100%;
+  }
+
   &.is-open {
     opacity: 1;
     visibility: visible;
     transition: opacity var(--transition-time), visibility var(--transition-time);
   }
 
-  &__container {
+  &__drawer {
     position: absolute;
     top: 0;
     right: 0;
-    width: 500px;
+    width: var(--drawer-width);
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -32,7 +37,7 @@
     text-align: left;
     height: 100%;
     transform: translateX(100%);
-    transition: transform var(--transition-time);
+    transition: transform var(--transition-time), opacity var(--transition-time), visibility var(--transition-time);;
 
     &--center {
       justify-content: center;
@@ -45,25 +50,99 @@
     }
 
     @media (max-width: 576px) {
-      width: 100%;
       transform: translateX(0%);
       opacity: 0;
       visibility: hidden;
-      transition: opacity 0.3s, visibility 0.3s;
+    }
+  }
+
+  &__container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 500px;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+
+    @media (max-width: 576px) {
+      width: 100%;
+    }
+
+    /* drawer animation */
+    &.drawer {
+      .modal__drawer {
+        transform: translateX(0%);
+
+        @media (max-width: 576px) {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+
+    /* fade animation */
+    &.fade {
+      .modal__drawer {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0%);
+        transition: opacity 0.3s, visibility 0.3s;
+      }
+    }
+
+    &--full {
+      left: 0;
+      width: 100%;
+
+      @media (max-width: 1280px) {
+        --drawer-width: 430px;
+      }
+
+      @media (max-width: 1024px) {
+        --drawer-width: 100%;
+        flex-direction: column;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        .modal-body {
+          width: 100%;
+          height: auto;
+          position: static;
+        }
+
+        .modal__drawer {
+          position: static;
+          height: auto;
+        }
+      }
+
+      .modal-body__close {
+        @media (min-width: 1025px) {
+          display: none;
+        }
+      }
+
+      .modal__drawer {
+        transform: translateX(0%);
+        transition: opacity 0.3s, visibility 0.3s;
+      }
+
+      .modal__content {
+        padding-top: 40px;
+        padding-bottom: 50px;
+      }
     }
 
     &.modal-open {
-      transform: translateX(0%);
-
-      @media (max-width: 576px) {
-        opacity: 1;
-        visibility: visible;
-      }
+      opacity: 1;
+      visibility: visible;
     }
   }
 
   &__content {
-    padding: 40px 50px 102px;
+    padding: 40px 50px 90px;
     overflow-y: auto;
     overflow-x: hidden;
 
@@ -73,9 +152,13 @@
   }
 
   &__title {
-    display: block;
+    display: inline-block;
     margin-bottom: 10px;
     cursor: text;
+
+    &--offset {
+      margin-bottom: 20px;
+    }
   }
 
   &__desc {
@@ -86,6 +169,12 @@
     color: var(--color-gray);
     cursor: text;
     margin-bottom: 30px;
+
+    &--black {
+      max-width: 100%;
+      margin-bottom: 20px;
+      color: var(--color-text);
+    }
   }
 
   &__close {
@@ -154,5 +243,264 @@
     height: auto;
     object-fit: cover;
     margin-bottom: 30px;
+  }
+
+  &-body {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: calc(100% - var(--drawer-width));
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #000;
+    cursor: default;
+
+    &__close {
+      display: inline-flex;
+      position: absolute;
+      z-index: 2;
+      top: 50px;
+      right: 50px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100%;
+      background-color: rgba(#fff, 0.2);
+      width: 64px;
+      height: 64px;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: rgba(#fff, 0.15);
+      }
+
+      @media (max-width: 1024px) {
+        width: 50px;
+        height: 50px;
+        right: var(--container-offset);
+        top: 25px;
+      }
+
+      @media (max-width: 768px) {
+        width: 38px;
+        height: 38px;
+        top: 20px;
+      }
+
+      svg {
+        display: block;
+        width: 24px;
+        height: 24px;
+        stroke: var(--color-white);
+
+        @media (max-width: 768px) {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    margin-top: auto;
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: center;
+  }
+
+  &-slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    &__wrapper {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      min-height: 460px;
+      padding: 0 160px;
+
+      @media (max-width: 1500px) {
+        padding: 0 90px;
+      }
+
+      @media (max-width: 1200px) {
+        flex-direction: column;
+        padding: 0 var(--container-offset) 40px;
+        min-height: 600px;
+        justify-content: space-between;
+      }
+
+      @media (max-width: 1024px) {
+        min-height: auto;
+        padding: 120px var(--container-offset) 51px;
+      }
+    }
+
+    &__main {
+      position: relative;
+      width: 100%;
+      height: 100%;
+
+      @media (max-width: 1024px) {
+        margin-bottom: 60px;
+      }
+
+      .swiper-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        @media (max-width: 1024px) {
+          position: static;
+        }
+      }
+    }
+
+    &__slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    &__image {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &__bottom {
+      width: 100%;
+      padding: 7.5px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--color-text);
+    }
+
+    &__nav {
+      padding: 0 10px;
+
+      .modal-slider__slide {
+        width: 95px;
+        height: 54px;
+        cursor: pointer;
+        border: 2px solid transparent;
+        transition: border-color 0.3s;
+
+        &.swiper-slide-thumb-active {
+          border-color: var(--color-main);
+        }
+      }
+    }
+
+    &__btns {
+
+      @media (max-width: 1200px) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: static;
+        width: 120px;
+      }
+
+      @media (max-width: 576px) {
+        width: 126px;
+      }
+    }
+
+    &__btn {
+      --offset: 50px;
+      --size: 64px;
+      display: inline-flex;
+      width: var(--size);
+      height: var(--size);
+      top: 50%;
+      position: absolute;
+      transform: translateY(-50%);
+      align-items: center;
+      justify-content: center;
+      border-radius: 100%;
+      background-color: var(--color-white);
+      transition: background-color 0.3s;
+
+      @media (max-width: 1500px) {
+        --offset: 20px;
+        --size: 50px;
+      }
+
+      @media (max-width: 1200px) {
+        position: static;
+      }
+
+      @media (max-width: 576px) {
+        --size: 38px;
+      }
+
+      &--prev {
+        left: var(--offset);
+      }
+
+      &--next {
+        right: var(--offset);
+      }
+
+      &:hover {
+        background-color: rgba(#fff, 0.9);
+      }
+
+      svg {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+
+        @media (max-width: 1500px) {
+          width: 20px;
+          height: 20px;
+        }
+
+        @media (max-width: 576px) {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+  }
+
+  &-info {
+    margin-bottom: 20px;
+
+    &__item {
+      display: flex;
+      align-items: center;
+      line-height: 25.6px;
+
+      svg {
+        display: block;
+        width: 15px;
+        height: 15px;
+        margin-right: 10px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__price {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28.8px;
   }
 }

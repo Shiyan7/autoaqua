@@ -1,55 +1,168 @@
 <div class="modal">
   <div class="modal__container" role="dialog" aria-modal="true" data-modal-target="request-call">
-    <button class="btn-reset modal__close js-modal-close" aria-label="Закрыть модальное окно">
-      <svg aria-hidden="true">
-        <use xlink:href="img/sprite.svg#cross"></use>
-      </svg>
-    </button>
-    <div class="modal__content">
-      <h2 class="g-title g-title--sm modal__title">Заказать звонок</h2>
-      <p class="modal__desc">Оставьте заявку, наш менеджер свяжется с Вами в ближайшее время и ответит на все интересующие вопросы.</p>
-      <form action="#" class="modal-form">
-        <label class="g-input modal-form__input">
-          <span class="g-input__caption">Ваше имя:</span>
-          <input type="text" class="input-reset g-input__input" placeholder="Введите ваше имя">
-        </label>
-        <label class="g-input modal-form__input">
-          <span class="g-input__caption">Ваш номер телефона:</span>
-          <input type="tel" class="input-reset g-input__input mask-input" placeholder="Ваш номер телефона">
-        </label>
-        <label class="g-input g-input--textarea modal-form__input">
-          <span class="g-input__caption">Комментарий:</span>
-          <textarea class="input-reset g-input__input" placeholder="Дополнительная информация"></textarea>
-        </label>
-        <button class="btn-reset g-btn g-btn--fill modal-form__btn" type="button" data-modal-path="thank">
-          Отправить заявку
+    <div class="modal__drawer">
+      <button class="btn-reset modal__close js-modal-close" aria-label="Закрыть модальное окно">
+        <svg aria-hidden="true">
+          <use xlink:href="img/sprite.svg#cross"></use>
+        </svg>
+      </button>
+      <div class="modal__content">
+        <h2 class="g-title g-title--sm modal__title">Заказать звонок</h2>
+        <p class="modal__desc">Оставьте заявку, наш менеджер свяжется с Вами в ближайшее время и ответит на все интересующие вопросы.</p>
+        <form action="#" class="modal-form">
+          <label class="g-input modal-form__input">
+            <span class="g-input__caption">Ваше имя:</span>
+            <input type="text" class="input-reset g-input__input" placeholder="Введите ваше имя">
+          </label>
+          <label class="g-input modal-form__input">
+            <span class="g-input__caption">Ваш номер телефона:</span>
+            <input type="tel" class="input-reset g-input__input mask-input" placeholder="Ваш номер телефона">
+          </label>
+          <label class="g-input g-input--textarea modal-form__input">
+            <span class="g-input__caption">Комментарий:</span>
+            <textarea class="input-reset g-input__input" placeholder="Дополнительная информация"></textarea>
+          </label>
+          <button class="btn-reset g-btn g-btn--fill modal-form__btn" type="button" data-modal-animation="drawer" data-modal-path="thank">
+            Отправить заявку
+            <svg aria-hidden="true">
+              <use xlink:href="img/sprite.svg#arrow-right"></use>
+            </svg>
+          </button>
+          <p class="modal-form__desc">
+            Нажимая «отправить», я даю согласие на
+            <a href="policy.html">обработку&nbsp;персональных&nbsp;данных</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="modal__container" role="dialog" aria-modal="true" data-modal-target="thank">
+    <div class="modal__drawer modal__drawer--center">
+      <button class="btn-reset modal__close js-modal-close" aria-label="Закрыть модальное окно">
+        <svg aria-hidden="true">
+          <use xlink:href="img/sprite.svg#cross"></use>
+        </svg>
+      </button>
+      <div class="modal__content">
+        <img class="modal__image" src="img/thank.svg" alt="Ваша заявка принята!">
+        <h2 class="g-title g-title--sm modal__title">Ваша заявка принята!</h2>
+        <p class="modal__desc">Наш менеджер свяжется с Вами в ближайшее время ответит на все интересующие вопросы и поможем даже в самых сложных случаях!</p>
+        <a href="/" class="btn-reset g-btn g-btn--fill modal-form__btn">
+          Вернуться на главную
           <svg aria-hidden="true">
             <use xlink:href="img/sprite.svg#arrow-right"></use>
           </svg>
-        </button>
-        <p class="modal-form__desc">
-          Нажимая «отправить», я даю согласие на
-          <a href="policy.html">обработку&nbsp;персональных&nbsp;данных</a>
-        </p>
-      </form>
+        </a>
+      </div>
     </div>
   </div>
-  <div class="modal__container modal__container--center" role="dialog" aria-modal="true" data-modal-target="thank">
-    <button class="btn-reset modal__close js-modal-close" aria-label="Закрыть модальное окно">
-      <svg aria-hidden="true">
-        <use xlink:href="img/sprite.svg#cross"></use>
-      </svg>
-    </button>
-    <div class="modal__content">
-      <img class="modal__image" src="img/thank.svg" alt="Ваша заявка принята!">
-      <h2 class="g-title g-title--sm modal__title">Ваша заявка принята!</h2>
-      <p class="modal__desc">Наш менеджер свяжется с Вами в ближайшее время ответит на все интересующие вопросы и поможем даже в самых сложных случаях!</p>
-      <a href="/" class="btn-reset g-btn g-btn--fill modal-form__btn">
-        Вернуться на главную
+  <div class="modal__container modal__container--full" role="dialog" aria-modal="true" data-modal-target="work">
+    <div class="modal-body">
+      <button class="btn-reset modal-body__close js-modal-close" aria-label="Закрыть модальное окно">
+        <svg aria-hidden="true">
+          <use xlink:href="img/sprite.svg#cross"></use>
+        </svg>
+      </button>
+      <div class="modal-slider">
+        <div class="modal-slider__wrapper">
+          <div class="swiper modal-slider__main">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide modal-slider__slide">
+                <picture>
+                  <source srcset="img/work-image.avif" type="image/avif">
+                  <source srcset="img/work-image.webp" type="image/webp">
+                  <img loading="lazy" src="img/work-image.jpg" class="modal-slider__image" width="1092" height="614" alt="Скважина с кессоном">
+                </picture>
+              </div>
+              <div class="swiper-slide modal-slider__slide">
+                <picture>
+                  <source srcset="img/work-image.avif" type="image/avif">
+                  <source srcset="img/work-image.webp" type="image/webp">
+                  <img loading="lazy" src="img/work-image.jpg" class="modal-slider__image" width="1092" height="614" alt="Скважина с кессоном">
+                </picture>
+              </div>
+              <div class="swiper-slide modal-slider__slide">
+                <picture>
+                  <source srcset="img/work-image.avif" type="image/avif">
+                  <source srcset="img/work-image.webp" type="image/webp">
+                  <img loading="lazy" src="img/work-image.jpg" class="modal-slider__image" width="1092" height="614" alt="Скважина с кессоном">
+                </picture>
+              </div>
+            </div>
+          </div>
+          <div class="modal-slider__btns">
+            <button class="btn-reset modal-slider__btn modal-slider__btn--prev" aria-label="Назад">
+              <svg aria-hidden="true">
+                <use xlink:href="img/sprite.svg#arrow-left"></use>
+              </svg>
+            </button>
+            <button class="btn-reset modal-slider__btn modal-slider__btn--next" aria-label="Вперёд">
+              <svg aria-hidden="true">
+                <use xlink:href="img/sprite.svg#arrow-right"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="modal-slider__bottom">
+          <div class="swiper modal-slider__nav">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide modal-slider__slide">
+                <picture>
+                  <source srcset="img/work-image.avif" type="image/avif">
+                  <source srcset="img/work-image.webp" type="image/webp">
+                  <img loading="lazy" src="img/work-image.jpg" class="modal-slider__image" width="1092" height="614" alt="Скважина с кессоном">
+                </picture>
+              </div>
+              <div class="swiper-slide modal-slider__slide">
+                <picture>
+                  <source srcset="img/work-image.avif" type="image/avif">
+                  <source srcset="img/work-image.webp" type="image/webp">
+                  <img loading="lazy" src="img/work-image.jpg" class="modal-slider__image" width="1092" height="614" alt="Скважина с кессоном">
+                </picture>
+              </div>
+              <div class="swiper-slide modal-slider__slide">
+                <picture>
+                  <source srcset="img/work-image.avif" type="image/avif">
+                  <source srcset="img/work-image.webp" type="image/webp">
+                  <img loading="lazy" src="img/work-image.jpg" class="modal-slider__image" width="1092" height="614" alt="Скважина с кессоном">
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal__drawer">
+      <button class="btn-reset modal__close js-modal-close" aria-label="Закрыть модальное окно">
+        <svg aria-hidden="true">
+          <use xlink:href="img/sprite.svg#cross"></use>
+        </svg>
+      </button>
+      <div class="modal__content">
+        <h2 class="g-title g-title--sm modal__title modal__title--offset">Скважина с кессоном</h2>
+        <p class="modal__desc modal__desc--black">Владельцы загородного участка в поселении Краснопахорское позвонили нашим специалистам с желанием устроить систему водоснабжения дома из своего источника. Хорошим источником воды для такой системы будет является скважина, пробуренная до объемного водоносного слоя. По договорённости с клиентом для обустройства скважины был выбран пластиковый кессон. Кессон позволяет иметь простой доступ к обсадной трубе без выполнения каких-либо земляных работ, что имеет значение при необходимости обслуживания или в случае ремонтных работ. Предполагалось расположить внутри кессона оборудование для автономной работы системы водоснабжения, чтобы не занимать пространство в доме.</p>
+        <ul class="list-reset modal-info">
+          <li class="modal-info__item">
+            <svg>
+              <use xlink:href="img/sprite.svg#location"></use>
+            </svg>
+            Москва, пос. Краснопахорское
+          </li>
+          <li class="modal-info__item">
+            <svg>
+              <use xlink:href="img/sprite.svg#deep"></use>
+            </svg>
+            Глубина : 65 м
+          </li>
+        </ul>
+        <span class="modal__price">2 357 ₽/м3</span>
+      </div>
+      <button class="btn-reset g-btn g-btn--fill modal__btn" type="button" data-modal-animation="fade" data-modal-path="request-call">
+        Заказать похожий проект
         <svg aria-hidden="true">
           <use xlink:href="img/sprite.svg#arrow-right"></use>
         </svg>
-      </a>
+      </button>
     </div>
   </div>
 </div>
