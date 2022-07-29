@@ -4,7 +4,7 @@ const defaultErrorMessage = '*это поле обязательно к запо
 
 validateForms("#request-form", [
   {
-    ruleSelector: "#name",
+    ruleSelector: ".validate-name",
     rules: [
       {
         rule: 'required',
@@ -14,7 +14,7 @@ validateForms("#request-form", [
   },
   {
     tel: true,
-    ruleSelector: "#tel",
+    ruleSelector: ".validate-tel",
     rules: [
       {
         rule: 'required',
@@ -23,7 +23,7 @@ validateForms("#request-form", [
     ]
   },
   {
-    ruleSelector: "#message",
+    ruleSelector: ".validate-message",
     rules: [
       {
         rule: 'required',

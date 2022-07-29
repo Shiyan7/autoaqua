@@ -22,6 +22,13 @@
     opacity: 1;
     visibility: visible;
     transition: opacity var(--transition-time), visibility var(--transition-time);
+
+    .modal__container {
+      &.modal-open {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
   }
 
   &__drawer {
@@ -133,11 +140,6 @@
         padding-top: 40px;
         padding-bottom: 50px;
       }
-    }
-
-    &.modal-open {
-      opacity: 1;
-      visibility: visible;
     }
   }
 
