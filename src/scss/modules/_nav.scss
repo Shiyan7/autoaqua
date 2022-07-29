@@ -15,7 +15,7 @@
         visibility: visible;
       }
 
-      .nav__link--dropdown {
+      .nav__link {
         color: var(--color-white);
         background-color: var(--color-main);
       }
@@ -37,10 +37,7 @@
     padding: 19px 0 21px;
     color: var(--color-white);
     font-weight: 400;
-
-    &--dropdown {
-      transition: background-color 0.2s ease-in-out;
-    }
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 
     @media (max-width: 1500px) {
       font-size: 15px;

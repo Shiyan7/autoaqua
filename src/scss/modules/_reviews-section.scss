@@ -78,6 +78,10 @@
   height: 100%;
   border: 1px solid var(--color-porcelain);
 
+  &[data-modal-path] {
+    cursor: pointer;
+  }
+
   @media (max-width: 1200px) {
     --offset: 30px;
   }
@@ -88,7 +92,6 @@
 
   &--has-backdrop {
     border-color: transparent;
-    cursor: pointer;
 
     &:hover {
       &:before {

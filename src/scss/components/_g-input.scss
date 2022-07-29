@@ -2,8 +2,6 @@
   display: flex;
   flex-direction: column;
 
-
-
   &--stroke {
 
     .g-input__caption {
@@ -47,8 +45,19 @@
     color: var(--color-text);
     padding: 25px 35px;
 
+    &.is-invalid {
+      border-color: var(--color-red);
+    }
+
     &::placeholder {
       color: rgba(#2c3039, 0.5);
     }
+  }
+
+  .just-validate-error-label {
+    text-align: right;
+    font-size: 14px;
+    line-height: 22.4px;
+    color: var(--color-red);
   }
 }

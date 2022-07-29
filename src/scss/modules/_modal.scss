@@ -503,4 +503,11 @@
     font-size: 18px;
     line-height: 28.8px;
   }
+
+  &__date {
+    display: block;
+    margin-bottom: 10px;
+    line-height: 22.4px;
+    color: var(--color-gray);
+  }
 }

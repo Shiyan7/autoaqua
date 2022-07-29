@@ -9,20 +9,20 @@
       <div class="modal__content">
         <h2 class="g-title g-title--sm modal__title">Заказать звонок</h2>
         <p class="modal__desc">Оставьте заявку, наш менеджер свяжется с Вами в ближайшее время и ответит на все интересующие вопросы.</p>
-        <form action="#" class="modal-form">
+        <form action="#" class="modal-form" id="request-form">
           <label class="g-input modal-form__input">
             <span class="g-input__caption">Ваше имя:</span>
-            <input type="text" class="input-reset g-input__input" placeholder="Введите ваше имя">
+            <input type="text" class="input-reset g-input__input" id="name" placeholder="Введите ваше имя">
           </label>
           <label class="g-input modal-form__input">
             <span class="g-input__caption">Ваш номер телефона:</span>
-            <input type="tel" class="input-reset g-input__input mask-input" placeholder="Ваш номер телефона">
+            <input type="tel" class="input-reset g-input__input mask-input" id="tel" placeholder="Ваш номер телефона">
           </label>
           <label class="g-input g-input--textarea modal-form__input">
             <span class="g-input__caption">Комментарий:</span>
-            <textarea class="input-reset g-input__input" placeholder="Дополнительная информация"></textarea>
+            <textarea class="input-reset g-input__input" id="message" placeholder="Дополнительная информация"></textarea>
           </label>
-          <button class="btn-reset g-btn g-btn--fill modal-form__btn" type="button" data-modal-animation="drawer" data-modal-path="thank">
+          <button class="btn-reset g-btn g-btn--fill modal-form__btn">
             Отправить заявку
             <svg aria-hidden="true">
               <use xlink:href="img/sprite.svg#arrow-right"></use>
@@ -110,21 +110,21 @@
                 <picture>
                   <source srcset="img/work-image.avif" type="image/avif">
                   <source srcset="img/work-image.webp" type="image/webp">
-                  <img loading="lazy" src="img/work-image.jpg" class="modal-slider__image" width="1092" height="614" alt="Скважина с кессоном">
+                  <img loading="lazy" src="img/work-image.jpg" class="modal-slider__image" width="95" height="54" alt="Скважина с кессоном">
                 </picture>
               </div>
               <div class="swiper-slide modal-slider__slide">
                 <picture>
                   <source srcset="img/work-image.avif" type="image/avif">
                   <source srcset="img/work-image.webp" type="image/webp">
-                  <img loading="lazy" src="img/work-image.jpg" class="modal-slider__image" width="1092" height="614" alt="Скважина с кессоном">
+                  <img loading="lazy" src="img/work-image.jpg" class="modal-slider__image" width="95" height="54" alt="Скважина с кессоном">
                 </picture>
               </div>
               <div class="swiper-slide modal-slider__slide">
                 <picture>
                   <source srcset="img/work-image.avif" type="image/avif">
                   <source srcset="img/work-image.webp" type="image/webp">
-                  <img loading="lazy" src="img/work-image.jpg" class="modal-slider__image" width="1092" height="614" alt="Скважина с кессоном">
+                  <img loading="lazy" src="img/work-image.jpg" class="modal-slider__image" width="95" height="54" alt="Скважина с кессоном">
                 </picture>
               </div>
             </div>
@@ -163,6 +163,111 @@
           <use xlink:href="img/sprite.svg#arrow-right"></use>
         </svg>
       </button>
+    </div>
+  </div>
+  <div class="modal__container modal__container--full" role="dialog" aria-modal="true" data-modal-target="video-review">
+    <div class="modal-body">
+      <button class="btn-reset modal-body__close js-modal-close" aria-label="Закрыть модальное окно">
+        <svg aria-hidden="true">
+          <use xlink:href="img/sprite.svg#cross"></use>
+        </svg>
+      </button>
+      <div class="modal-slider">
+        <div class="modal-slider__wrapper">
+          <div class="swiper modal-slider__main">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide modal-slider__slide">
+                <picture>
+                  <source srcset="img/review-image.avif" type="image/avif">
+                  <source srcset="img/review-image.webp" type="image/webp">
+                  <img loading="lazy" src="img/review-image.jpg" class="modal-slider__image" width="1092" height="614" alt="Олег">
+                </picture>
+              </div>
+              <div class="swiper-slide modal-slider__slide">
+                <picture>
+                  <source srcset="img/review-image.avif" type="image/avif">
+                  <source srcset="img/review-image.webp" type="image/webp">
+                  <img loading="lazy" src="img/review-image.jpg" class="modal-slider__image" width="1092" height="614" alt="Олег">
+                </picture>
+              </div>
+            </div>
+          </div>
+          <div class="modal-slider__btns">
+            <button class="btn-reset modal-slider__btn modal-slider__btn--prev" aria-label="Назад">
+              <svg aria-hidden="true">
+                <use xlink:href="img/sprite.svg#arrow-left"></use>
+              </svg>
+            </button>
+            <button class="btn-reset modal-slider__btn modal-slider__btn--next" aria-label="Вперёд">
+              <svg aria-hidden="true">
+                <use xlink:href="img/sprite.svg#arrow-right"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="modal-slider__bottom">
+          <div class="swiper modal-slider__nav">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide modal-slider__slide">
+                <picture>
+                  <source srcset="img/review-image.avif" type="image/avif">
+                  <source srcset="img/review-image.webp" type="image/webp">
+                  <img loading="lazy" src="img/review-image.jpg" class="modal-slider__image" width="95" height="54" alt="Олег">
+                </picture>
+              </div>
+              <div class="swiper-slide modal-slider__slide">
+                <picture>
+                  <source srcset="img/review-image.avif" type="image/avif">
+                  <source srcset="img/review-image.webp" type="image/webp">
+                  <img loading="lazy" src="img/review-image.jpg" class="modal-slider__image" width="95" height="54" alt="Олег">
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal__drawer">
+      <button class="btn-reset modal__close js-modal-close" aria-label="Закрыть модальное окно">
+        <svg aria-hidden="true">
+          <use xlink:href="img/sprite.svg#cross"></use>
+        </svg>
+      </button>
+      <div class="modal__content">
+        <span class="modal__date">18 мая 2022</span>
+        <h2 class="g-title g-title--sm modal__title modal__title--offset">Олег</h2>
+        <p class="modal__desc modal__desc--black">Обращались в компанию за уборкой после ремонта общего коридора на этаже. Загрязнения были сильными (шпатлевка, пыль, фуга и даже краска на пористой плитке), но ребята (Андрей и напарник) со своим оборудованием и средствами справились на отлично!</p>
+        <ul class="list-reset modal-info">
+          <li class="modal-info__item">
+            <svg>
+              <use xlink:href="img/sprite.svg#location"></use>
+            </svg>
+            Москва, пос. Краснопахорское
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="modal__container" role="dialog" aria-modal="true" data-modal-target="review">
+    <div class="modal__drawer">
+      <button class="btn-reset modal__close js-modal-close" aria-label="Закрыть модальное окно">
+        <svg aria-hidden="true">
+          <use xlink:href="img/sprite.svg#cross"></use>
+        </svg>
+      </button>
+      <div class="modal__content">
+        <span class="modal__date">18 мая 2022</span>
+        <h2 class="g-title g-title--sm modal__title modal__title--offset">Олег</h2>
+        <p class="modal__desc modal__desc--black">Следует отметить, что курс на социально-ориентированный национальный проект влечет за собой процесс внедрения и модернизации направлений прогрессивного развития. Картельные сговоры не допускают ситуации, при которой ключевые особенности структуры проекта будут преданы социально-демократической анафеме. Как уже неоднократно упомянуто, тщательные исследования конкурентов и по сей день остаются уделом либералов, которые жаждут быть подвергнуты целой серии независимых исследований.</p>
+        <ul class="list-reset modal-info">
+          <li class="modal-info__item">
+            <svg>
+              <use xlink:href="img/sprite.svg#location"></use>
+            </svg>
+            Москва, пос. Краснопахорское
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>

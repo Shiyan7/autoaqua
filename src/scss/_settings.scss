@@ -34,7 +34,7 @@ a {
 }
 
 .site-container {
-  overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+  overflow: hidden;
 }
 
 .btn-reset {
@@ -90,10 +90,6 @@ a {
 
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
-}
-
-.centered {
-  text-align: center;
 }
 
 .dis-scroll {
