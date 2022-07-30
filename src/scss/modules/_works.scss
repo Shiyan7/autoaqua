@@ -1,0 +1,21 @@
+.works {
+  &__container {
+    padding-bottom: 20px;
+
+    @media (max-width: 1024px) {
+      padding-bottom: 0;
+    }
+  }
+
+  &__title {
+    padding-bottom: 127px;
+
+    @media (max-width: 1024px) {
+      padding-bottom: 90px;
+    }
+
+    @media (max-width: 576px) {
+      padding-bottom: 80px;
+    }
+  }
+}

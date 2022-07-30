@@ -3,7 +3,6 @@ export const enableScroll = () => {
 
     let scrollPosition = document.body.getAttribute("data-body-scroll-fix");
 
-    // Удаляем атрибут
     document.body.removeAttribute("data-body-scroll-fix");
 
     document.body.style.overflow = "";

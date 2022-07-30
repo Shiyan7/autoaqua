@@ -1,0 +1,23 @@
+.load-more {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+
+  @media (max-width: 576px) {
+    margin-top: 30px;
+    flex-direction: column-reverse;
+  }
+
+  &--offset {
+    @media (max-width: 576px) {
+      margin-top: 80px;
+    }
+  }
+
+  &__pagination {
+    @media (max-width: 576px) {
+      margin-bottom: 30px;
+    }
+  }
+}

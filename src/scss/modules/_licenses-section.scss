@@ -54,7 +54,7 @@
   border: 1px solid var(--color-porcelain);
 
   @media (max-width: 576px) {
-    padding: 20px 30px;
+    padding: 20px 29px;
   }
 
   &__license {
@@ -78,8 +78,13 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     margin-bottom: 10px;
+    max-width: 195px;
     font-size: 18px;
     line-height: 28.8px;
+
+    @media (max-width: 576px) {
+      max-width: 100%;
+    }
   }
 
   &__desc {
