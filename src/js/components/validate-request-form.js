@@ -1,8 +1,11 @@
 import {validateForms} from "../functions/validate-forms";
+import {Modal} from '../vendor/modal';
 
 const defaultErrorMessage = '*это поле обязательно к заполнению'
 
-validateForms("#request-form", [
+const modal = new Modal()
+
+const rules = [
   {
     ruleSelector: ".validate-name",
     rules: [
@@ -31,4 +34,13 @@ validateForms("#request-form", [
       }
     ]
   }
-])
+]
+
+const onFail = () => {}
+
+const onSuccess = () => {
+  modal.close()
+  modal.open("thank")
+}
+
+validateForms("#request-form", rules, onFail, onSuccess)

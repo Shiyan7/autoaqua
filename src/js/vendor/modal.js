@@ -26,6 +26,7 @@ export class Modal {
       '[contenteditable]',
       '[tabindex]:not([tabindex^="-"])'
     ];
+    this.modals = document.querySelectorAll('.modal__container')
     this._fixBlocks = document.querySelectorAll('.fix-block');
     this.events();
   }
@@ -86,6 +87,8 @@ export class Modal {
       this.modalContainer = document.querySelector(`[data-modal-target="${selector}"]`);
     }
 
+    this.modalContainer.scrollTo(0, 0)
+
     this.modal.style.setProperty('--transition-time', `${this.speed / 1000}s`);
     this.modal.classList.add('is-open');
 
@@ -108,16 +111,12 @@ export class Modal {
     if (this.modalContainer) {
       this.modalContainer.classList.remove(this.animation);
       this.modal.classList.remove('is-open');
-      this.modalContainer.classList.remove('modal-open');
 
       this.enableScroll();
 
-      const modals = document.querySelectorAll(".modal__container");
-
-      modals.forEach(el => {
-        el.classList.remove("modal-open")
-        el.classList.remove("fade")
-        el.classList.remove("drawer")
+      this.modals.forEach(el => {
+        el.classList.remove('modal-open')
+        el.classList.remove(this.animation)
       })
 
       document.body.style.scrollBehavior = 'auto';

@@ -1,11 +1,9 @@
-import {Modal} from '../vendor/modal';
 import JustValidate from 'just-validate';
 import Inputmask from "inputmask";
 
-export const validateForms = (selector, rules) => {
+export const validateForms = (selector, rules, onFail, onSuccess) => {
   const form = document?.querySelector(selector);
   const telSelector = form?.querySelector('.mask-input');
-  const modal = new Modal()
 
   if (!form) {
     console.error('Нет такого селектора!');
@@ -39,9 +37,12 @@ export const validateForms = (selector, rules) => {
     validation.addField(item.ruleSelector, item.rules);
   }
 
+  validation.onFail(() => {
+    onFail()
+  })
+
   validation.onSuccess(event => {
-    modal.close()
-    modal.open("thank")
+    onSuccess()
 
     event.target.reset()
   })
