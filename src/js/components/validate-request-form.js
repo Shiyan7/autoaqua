@@ -36,11 +36,9 @@ const rules = [
   }
 ]
 
-const onFail = () => {}
-
 const onSuccess = () => {
   modal.close()
   modal.open("thank")
 }
 
-validateForms("#request-form", rules, onFail, onSuccess)
+validateForms("#request-form", rules, onSuccess)

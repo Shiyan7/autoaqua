@@ -104,6 +104,7 @@ export class Modal {
       this.options.isOpen(this);
       this.isOpen = true;
       this.focusTrap();
+      this.modalContainer.querySelector("input")?.focus()
     }, this.speed);
   }
 

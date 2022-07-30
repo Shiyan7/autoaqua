@@ -1,7 +1,7 @@
 import JustValidate from 'just-validate';
 import Inputmask from "inputmask";
 
-export const validateForms = (selector, rules, onFail, onSuccess) => {
+export const validateForms = (selector, rules, onSuccess, onFail) => {
   const form = document?.querySelector(selector);
   const telSelector = form?.querySelector('.mask-input');
 

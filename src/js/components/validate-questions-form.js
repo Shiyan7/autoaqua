@@ -27,12 +27,12 @@ const rules = [
   },
 ]
 
-const onFail = () => {
-  modal.close()
-}
-
 const onSuccess = () => {
   modal.open()
 }
 
-validateForms("#questions-form", rules, onFail, onSuccess)
+const onFail = () => {
+  modal.close()
+}
+
+validateForms("#questions-form", rules, onSuccess, onFail)
