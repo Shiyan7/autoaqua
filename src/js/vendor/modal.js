@@ -99,7 +99,6 @@ export class Modal {
 
     setTimeout(() => {
       this.options.isOpen(this);
-      this.modalContainer.classList.add('animate-open');
       this.isOpen = true;
       this.focusTrap();
     }, this.speed);
@@ -107,12 +106,19 @@ export class Modal {
 
   close() {
     if (this.modalContainer) {
-      this.modalContainer.classList.remove('animate-open');
       this.modalContainer.classList.remove(this.animation);
       this.modal.classList.remove('is-open');
       this.modalContainer.classList.remove('modal-open');
 
       this.enableScroll();
+
+      const modals = document.querySelectorAll(".modal__container");
+
+      modals.forEach(el => {
+        el.classList.remove("modal-open")
+        el.classList.remove("fade")
+        el.classList.remove("drawer")
+      })
 
       document.body.style.scrollBehavior = 'auto';
       document.documentElement.style.scrollBehavior = 'auto';

@@ -17,13 +17,6 @@
     opacity: 1;
     visibility: visible;
     transition: opacity var(--transition-time), visibility var(--transition-time);
-
-    .modal__container {
-      &.modal-open {
-        opacity: 1;
-        visibility: visible;
-      }
-    }
   }
 
   &__drawer {
@@ -73,6 +66,11 @@
       width: 100%;
     }
 
+    &.modal-open {
+      opacity: 1;
+      visibility: visible;
+    }
+
     /* drawer animation */
     &.drawer {
       .modal__drawer {
@@ -106,9 +104,10 @@
       }
 
       @media (max-width: 1024px) {
-        flex-direction: column;
         overflow-y: auto;
         overflow-x: hidden;
+        display: grid;
+        grid-template-rows: max-content;
 
         .modal-body {
           width: 100%;
