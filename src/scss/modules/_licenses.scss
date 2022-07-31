@@ -1,0 +1,43 @@
+.licenses {
+  &__container {
+    padding-bottom: 120px;
+
+    @media (max-width: 1024px) {
+      padding-bottom: 90px;
+    }
+
+    @media (max-width: 576px) {
+      padding-bottom: 80px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 127px;
+
+    @media (max-width: 1024px) {
+      margin-bottom: 90px;
+    }
+
+    @media (max-width: 576px) {
+      margin-bottom: 77px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+    @media (max-width: 576px) {
+      display: flex;
+      gap: 0;
+      flex-direction: column;
+
+      .license-item {
+        &:not(:last-child) {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}

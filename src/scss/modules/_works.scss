@@ -8,14 +8,14 @@
   }
 
   &__title {
-    padding-bottom: 127px;
+    margin-bottom: 127px;
 
     @media (max-width: 1024px) {
-      padding-bottom: 90px;
+      margin-bottom: 90px;
     }
 
     @media (max-width: 576px) {
-      padding-bottom: 80px;
+      margin-bottom: 80px;
     }
   }
 }

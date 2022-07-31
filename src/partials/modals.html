@@ -38,12 +38,12 @@
   </div>
   <div class="modal__container" role="dialog" aria-modal="true" data-modal-target="thank">
     <div class="modal__drawer modal__drawer--center">
+      <button class="btn-reset modal__close js-modal-close" aria-label="Закрыть модальное окно">
+        <svg aria-hidden="true">
+          <use xlink:href="img/sprite.svg#cross"></use>
+        </svg>
+      </button>
       <div class="modal__content">
-        <button class="btn-reset modal__close js-modal-close" aria-label="Закрыть модальное окно">
-          <svg aria-hidden="true">
-            <use xlink:href="img/sprite.svg#cross"></use>
-          </svg>
-        </button>
         <img class="modal__image" src="img/thank.svg" alt="Ваша заявка принята!">
         <h2 class="g-title g-title--sm modal__title">Ваша заявка принята!</h2>
         <p class="modal__desc">Наш менеджер свяжется с Вами в ближайшее время ответит на все интересующие вопросы и поможем даже в самых сложных случаях!</p>
@@ -245,6 +245,97 @@
             Москва, пос. Краснопахорское
           </li>
         </ul>
+      </div>
+    </div>
+  </div>
+  <div class="modal__container modal__container--gallery" role="dialog" aria-modal="true" data-modal-target="license">
+    <div class="modal-body">
+      <button class="btn-reset modal-body__close js-modal-close" aria-label="Закрыть модальное окно">
+        <svg aria-hidden="true">
+          <use xlink:href="img/sprite.svg#cross"></use>
+        </svg>
+      </button>
+      <div class="modal-slider">
+        <div class="modal-slider__wrapper">
+          <div class="swiper modal-slider__main">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide modal-slider__slide">
+                <picture>
+                  <source srcset="img/license.avif" type="image/avif">
+                  <source srcset="img/license.webp" type="image/webp">
+                  <img loading="lazy" src="img/license.jpg" class="modal-slider__image" width="450" height="676" alt="Лицензия на бурение">
+                </picture>
+              </div>
+              <div class="swiper-slide modal-slider__slide">
+                <picture>
+                  <source srcset="img/license.avif" type="image/avif">
+                  <source srcset="img/license.webp" type="image/webp">
+                  <img loading="lazy" src="img/license.jpg" class="modal-slider__image" width="450" height="676" alt="Лицензия на бурение">
+                </picture>
+              </div>
+              <div class="swiper-slide modal-slider__slide">
+                <picture>
+                  <source srcset="img/license.avif" type="image/avif">
+                  <source srcset="img/license.webp" type="image/webp">
+                  <img loading="lazy" src="img/license.jpg" class="modal-slider__image" width="450" height="676" alt="Лицензия на бурение">
+                </picture>
+              </div>
+              <div class="swiper-slide modal-slider__slide">
+                <picture>
+                  <source srcset="img/license.avif" type="image/avif">
+                  <source srcset="img/license.webp" type="image/webp">
+                  <img loading="lazy" src="img/license.jpg" class="modal-slider__image" width="450" height="676" alt="Лицензия на бурение">
+                </picture>
+              </div>
+            </div>
+          </div>
+          <div class="modal-slider__btns">
+            <button class="btn-reset modal-slider__btn modal-slider__btn--prev" aria-label="Назад">
+              <svg aria-hidden="true">
+                <use xlink:href="img/sprite.svg#arrow-left"></use>
+              </svg>
+            </button>
+            <button class="btn-reset modal-slider__btn modal-slider__btn--next" aria-label="Вперёд">
+              <svg aria-hidden="true">
+                <use xlink:href="img/sprite.svg#arrow-right"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="modal-slider__bottom">
+          <div class="swiper modal-slider__nav">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide modal-slider__slide">
+                <picture>
+                  <source srcset="img/license.avif" type="image/avif">
+                  <source srcset="img/license.webp" type="image/webp">
+                  <img loading="lazy" src="img/license.jpg" class="modal-slider__image" width="95" height="54" alt="Лицензия на бурение">
+                </picture>
+              </div>
+              <div class="swiper-slide modal-slider__slide">
+                <picture>
+                  <source srcset="img/license.avif" type="image/avif">
+                  <source srcset="img/license.webp" type="image/webp">
+                  <img loading="lazy" src="img/license.jpg" class="modal-slider__image" width="95" height="54" alt="Лицензия на бурение">
+                </picture>
+              </div>
+              <div class="swiper-slide modal-slider__slide">
+                <picture>
+                  <source srcset="img/license.avif" type="image/avif">
+                  <source srcset="img/license.webp" type="image/webp">
+                  <img loading="lazy" src="img/license.jpg" class="modal-slider__image" width="95" height="54" alt="Лицензия на бурение">
+                </picture>
+              </div>
+              <div class="swiper-slide modal-slider__slide">
+                <picture>
+                  <source srcset="img/license.avif" type="image/avif">
+                  <source srcset="img/license.webp" type="image/webp">
+                  <img loading="lazy" src="img/license.jpg" class="modal-slider__image" width="95" height="54" alt="Лицензия на бурение">
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -9,14 +9,14 @@
 
   &__title {
     max-width: 940px;
-    padding-bottom: 126px;
+    margin-bottom: 126px;
 
     @media (max-width: 1024px) {
-      padding-bottom: 90px;
+      margin-bottom: 90px;
     }
 
     @media (max-width: 576px) {
-      padding-bottom: 80px;
+      margin-bottom: 80px;
     }
   }
 

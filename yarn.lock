@@ -3214,11 +3214,6 @@ electron-to-chromium@^1.4.202:
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.202.tgz#0c2ed733f42b02ec49a955c5badfcc65888c390b"
   integrity sha512-JYsK2ex9lmQD27kj19fhXYxzFJ/phLAkLKHv49A5UY6kMRV2xED3qMMLg/voW/+0AR6wMiI+VxlmK9NDtdxlPA==
 
-element-closest-polyfill@^1.0.4:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/element-closest-polyfill/-/element-closest-polyfill-1.0.5.tgz#adb93927754125e5dacd3c2cbf7603b772fc1169"
-  integrity sha512-MvAZcwG3nRRQK4Dk8kYyRHMJ4IOzFIIyakVMozwgCaAyItjAW8YbZAR63yyOJE0C3lf4E1CQzW+73rFj1YDUyw==
-
 email-addresses@^3.0.1:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/email-addresses/-/email-addresses-3.1.0.tgz#cabf7e085cbdb63008a70319a74e6136188812fb"
@@ -4072,11 +4067,6 @@ fsevents@~2.3.2:
   resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.2.tgz#8a526f78b8fdf4623b709e0b975c52c24c02fd1a"
   integrity sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==
 
-fslightbox@^3.3.1:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/fslightbox/-/fslightbox-3.3.1.tgz#33754f901ad776eb85122e685712eff84d21f04d"
-  integrity sha512-r8mS2lnqw+4F7fQmIXZ4Y+tulxqGsZyG7wzMhWKl8MHvVZRJnclUyt+n+hfTkUa+e1bvlzpw4tY/X9mwqC4wCg==
-
 function-bind@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
@@ -4415,18 +4405,6 @@ graceful-fs@^4.0.0, graceful-fs@^4.1.10, graceful-fs@^4.1.11, graceful-fs@^4.1.2
   version "4.2.10"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.10.tgz#147d3a006da4ca3ce14728c7aefc287c367d7a6c"
   integrity sha512-9ByhssR2fPVsNZj478qUUbKfmL0+t5BDVyjShtyZZLiK7ZDAArFFfopyOTj0M05wE2tJPisA4iTnnXl2YoPvOA==
-
-graph-modal@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/graph-modal/-/graph-modal-1.0.4.tgz#b9ecb630a967f349b6ec1f419e8eb6fd40c39466"
-  integrity sha512-NLDq3rUr9Ypc7PqRa355J036QgyToY6zeNHSV4N+KiIwQXLkbqTswo4IfYlJtemCxEFXEnZw08amMzD037MQjg==
-  dependencies:
-    element-closest-polyfill "^1.0.4"
-
-graph-tabs@^1.0.0:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/graph-tabs/-/graph-tabs-1.0.2.tgz#3fca92f62e1f9fd8624fc3dae05a71237ec47375"
-  integrity sha512-nKih2PMN26IeYcNHipkgB2Njr3RPTXZZ/+CVbihDQi62BFb1TcosXBiABrhGUOJmJ4dyZ20OK6j6IZnlG2n6dA==
 
 growly@^1.3.0:
   version "1.3.0"

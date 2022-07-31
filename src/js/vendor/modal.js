@@ -87,7 +87,7 @@ export class Modal {
       this.modalContainer = document.querySelector(`[data-modal-target="${selector}"]`);
     }
 
-    this.modalContainer.scrollTo(0, 0)
+    this.modalContainer?.scrollTo(0, 0)
 
     this.modal.style.setProperty('--transition-time', `${this.speed / 1000}s`);
     this.modal.classList.add('is-open');
