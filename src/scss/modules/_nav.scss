@@ -102,7 +102,7 @@
       color: var(--color-text);
       text-decoration: underline;
       text-decoration-skip-ink: none;
-      background-color: #fff;
+      background-color: var(--color-white);
       transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
     }
   }

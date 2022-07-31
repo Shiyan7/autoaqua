@@ -57,7 +57,7 @@ a {
   border: none;
   border-radius: 0;
   outline: none;
-  background-color: #fff;
+  background-color: var(--color-white);
 
   &::placeholder {
     opacity: 1;
