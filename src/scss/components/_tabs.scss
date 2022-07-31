@@ -89,6 +89,12 @@
     color: var(--color-main);
     transition: color 0.3s, background-color 0.3s;
 
+    &:not(.tabs__nav-btn--active) {
+      &:hover {
+        background-color: var(--color-porcelain);
+      }
+    }
+
     @media (max-width: 1024px) {
       position: relative;
       padding-left: 0;
@@ -114,6 +120,7 @@
       color: var(--color-white);
       text-decoration: none;
       background-color: var(--color-main);
+      cursor: text;
 
       &:before {
         border-color: var(--color-main);
