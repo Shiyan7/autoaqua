@@ -1,0 +1,84 @@
+.not-found {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 116px;
+    padding-bottom: 20px;
+    max-width: 1220px;
+
+    @media (max-width: 1200px) {
+      max-width: 1000px;
+      padding-top: 100px;
+    }
+
+    @media (max-width: 1024px) {
+      padding-bottom: 0;
+      padding-top: 80px;
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 580px;
+    height: auto;
+    object-fit: cover;
+    margin-right: 50px;
+
+    @media (max-width: 1200px) {
+      width: 450px;
+    }
+
+    @media (max-width: 1024px) {
+      width: 380px;
+    }
+
+    @media (max-width: 768px) {
+      margin-bottom: 50px;
+    }
+
+    @media (max-width: 576px) {
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto 50px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__desc {
+    margin: 0;
+    line-height: 25.6px;
+    margin-bottom: 180px;
+
+    @media (max-width: 1200px) {
+      margin-bottom: 120px;
+    }
+
+    @media (max-width: 1024px) {
+      margin-bottom: 100px;
+    }
+
+    @media (max-width: 768px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__link {
+    @media (max-width: 1024px) {
+      padding: 17px 33px;
+    }
+
+    @media (max-width: 576px) {
+      width: 100%;
+      padding: 26px 0;
+      justify-content: center;
+    }
+  }
+}
