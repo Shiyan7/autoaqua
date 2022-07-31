@@ -3,6 +3,13 @@
   align-items: center;
 
   &__item {
+
+    &:last-child {
+      @media (max-width: 576px) {
+        display: none;
+      }
+    }
+
     &:not(:last-child) {
       margin-right: 13px;
     }

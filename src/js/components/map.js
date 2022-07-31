@@ -2,13 +2,11 @@ document.addEventListener("DOMContentLoaded", () => {
     let center = [55.776109, 37.774861];
 
     function init() {
-        //eslint-disable-next-line
         let map = new ymaps.Map('map', {
             center: center,
             zoom: 10
         });
 
-        //eslint-disable-next-line
         let placemark = new ymaps.Placemark(center, {
             balloonContent: null,
         }, {
