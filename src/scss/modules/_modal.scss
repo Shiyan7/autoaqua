@@ -32,7 +32,7 @@
     text-align: left;
     height: 100%;
     transform: translateX(100%);
-    transition: transform var(--transition-time), opacity var(--transition-time), visibility var(--transition-time);;
+    transition: transform var(--transition-time), opacity var(--transition-time), visibility var(--transition-time);
 
     &--center {
       justify-content: center;
@@ -78,26 +78,28 @@
     &--full {
       left: 0;
       width: 100%;
-      display: grid;
-      grid-template-columns: 1fr 500px;
-      overflow-x: hidden;
-      overflow-y: auto;
 
       @media (max-width: 1280px) {
-        grid-template-columns: 1fr 430px;
+        .modal__drawer {
+          width: 430px;
+        }
       }
 
       @media (max-width: 1024px) {
+        overflow-y: auto;
+        overflow-x: hidden;
         display: grid;
-        grid-template-columns: 1fr;
         grid-template-rows: max-content;
 
         .modal-body {
+          width: 100%;
           height: auto;
+          position: static;
         }
 
         .modal__drawer {
           width: 100%;
+          position: static;
           height: auto;
         }
       }
@@ -109,8 +111,6 @@
       }
 
       .modal__drawer {
-        position: static;
-        width: 100%;
         transform: translateX(0%);
         transition: opacity 0.3s, visibility 0.3s;
       }
@@ -177,6 +177,10 @@
     padding: 40px 50px 90px;
     overflow-y: auto;
     overflow-x: hidden;
+
+    @media (min-width: 1025px) {
+      @include custom-scroll();
+    }
 
     @media (max-width: 576px) {
       padding: 30px 20px;
@@ -279,12 +283,28 @@
   }
 
   &-body {
-    width: 100%;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: calc(100% - 500px);
     height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
-    background-color: var(--color-black);
+    background-color: #000;
     cursor: default;
+
+    @media (min-width: 1025px) {
+      @include custom-scroll();
+    }
+
+    @media (max-width: 1280px) {
+      width: calc(100% - 430px);
+    }
+
+    @media (max-width: 1024px) {
+      width: 100%;
+    }
 
     &__close {
       display: inline-flex;
@@ -549,6 +569,8 @@
     color: var(--color-gray);
   }
 }
+
+/* Анимации */
 
 .modal__container.drawer {
   .modal__drawer {
