@@ -9,6 +9,7 @@
 
   &__title {
     max-width: 940px;
+    word-break: break-word;
     margin-bottom: 126px;
 
     @media (max-width: 1024px) {
