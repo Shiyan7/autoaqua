@@ -1,6 +1,50 @@
 .service {
+
+  &__container {
+    padding-bottom: 120px;
+
+    @media (max-width: 1024px) {
+      paddingmargin-bottom: 90px;
+    }
+
+    @media (max-width: 576px) {
+      padding-bottom: 80px;
+    }
+  }
+
   &-item {
     display: flex;
+
+    &--reverse {
+      flex-direction: row-reverse;
+
+      .service-item {
+        &__right {
+          margin-left: 0;
+          margin-right: 140px;
+
+          @media (max-width: 1280px) {
+            margin-right: 60px;
+          }
+
+          @media (max-width: 1024px) {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 120px;
+
+      @media (max-width: 1024px) {
+        margin-bottom: 90px;
+      }
+
+      @media (max-width: 576px) {
+        margin-bottom: 80px;
+      }
+    }
 
     @media (max-width: 1024px) {
       flex-direction: column;
@@ -12,6 +56,10 @@
       height: auto;
       object-fit: cover;
       margin-top: 6px;
+
+      &--sm {
+        height: 400px;
+      }
 
       @media (max-width: 1280px) {
         min-width: 500px;
