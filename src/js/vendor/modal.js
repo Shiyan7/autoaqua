@@ -1,5 +1,6 @@
 import {disableScroll} from '../functions/disable-scroll'
 import {enableScroll} from '../functions/enable-scroll'
+import Plyr from "plyr/dist/plyr";
 
 export class Modal {
   constructor(options) {
@@ -15,6 +16,7 @@ export class Modal {
     this._nextContainer = false;
     this.modalContainer = false;
     this.isOpen = false;
+    this.player = new Plyr(".player");
     this.previousActiveElement = false;
     this._focusElements = [
       'a[href]',
@@ -104,7 +106,6 @@ export class Modal {
       this.options.isOpen(this);
       this.isOpen = true;
       this.focusTrap();
-      // this.modalContainer.querySelector("input")?.focus()
     }, this.speed);
   }
 
@@ -131,6 +132,8 @@ export class Modal {
         this.reOpen = false;
         this.open();
       }
+
+      this.player.pause()
     }
   }
 

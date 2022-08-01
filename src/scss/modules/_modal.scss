@@ -374,6 +374,10 @@
       min-height: 480px;
       padding: 0 160px;
 
+      &--2 {
+        min-height: 650px;
+      }
+
       @media (max-width: 1500px) {
         padding: 0 90px;
       }

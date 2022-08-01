@@ -1,0 +1,94 @@
+.plyr {
+  position: relative;
+  width: fit-content;
+  display: flex;
+  border-radius: 0;
+
+  &--fullscreen-fallback {
+    display: block !important;
+    border-radius: 0 !important;
+    height: 100% !important;
+    margin: 0 !important;
+    border: none !important;
+    width: 100% !important;
+    position: fixed !important;
+  }
+
+  &:hover {
+    .plyr__controls {
+      display: flex;
+    }
+  }
+
+  .plyr__controls {
+    display: none;
+  }
+
+  &__poster {
+    background-size: contain;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(15, 29, 43, 0.75);
+    }
+  }
+
+  &__control--overlaid {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-main);
+    width: 64px !important;
+    height: 64px;
+    padding: 0;
+    opacity: 1;
+
+    &:hover {
+      background-color: var(--color-main-dark) !important;
+    }
+
+    svg {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  video {
+    object-fit: contain;
+  }
+}
+
+video {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  object-fit: cover;
+
+  @media (max-width: 768px) {
+    height: 350px;
+  }
+
+  @media (max-width: 576px) {
+    height: 290px;
+  }
+
+  @media (max-width: 420px) {
+    height: 200px;
+  }
+}
+
+.plyr:fullscreen {
+  border: none;
+
+  & video {
+    object-fit: contain;
+    max-width: 100%;
+  }
+}
