@@ -10,7 +10,7 @@
   }
 
   &__top {
-    margin-bottom: 56px;
+    margin-bottom: 51px;
 
     @media (max-width: 1024px) {
       margin-bottom: 40px;
@@ -49,13 +49,21 @@
   }
 
   &__title {
-    margin-bottom: 20px;
+    max-width: 1060px;
+    margin-bottom: 27px;
   }
 
   &__desc {
-    margin: 0;
-    line-height: 25.6px;
     max-width: 818px;
+
+    p {
+      margin: 0;
+      line-height: 25.6px;
+
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+    }
 
     @media (max-width: 1024px) {
       max-width: 100%;
