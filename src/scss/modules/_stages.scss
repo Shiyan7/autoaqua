@@ -1,0 +1,120 @@
+.stages {
+  &__container {
+    padding-bottom: 120px;
+
+    @media (max-width: 1024px) {
+      padding-bottom: 90px;
+    }
+
+    @media (max-width: 576px) {
+      padding-bottom: 80px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 25px;
+  }
+
+  &__desc {
+    margin-bottom: 97px;
+    max-width: 935px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 60px;
+    }
+
+    @media (max-width: 576px) {
+      margin-bottom: 30px;
+    }
+
+    p {
+      margin: 0;
+      line-height: 26px;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &-list {
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: repeat(5, 1fr);
+
+    @media (max-width: 1024px) {
+      gap: 50px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: 768px) {
+      gap: 20px;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &-item {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    position: relative;
+
+    &:not(:last-child) {
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 25px;
+        left: 0;
+        width: calc(100% - 30px);
+        height: 1px;
+        background-color: var(--color-main);
+        position: absolute;
+
+        @media (max-width: 768px) {
+          bottom: 0;
+          left: 14px;
+          width: 1px;
+          height: 100%;
+          top: auto;
+        }
+      }
+    }
+
+    &:before {
+      position: relative;
+      display: inline;
+      z-index: 2;
+      counter-increment: counter;
+      content: "0" counter(counter);
+      font-family: "Akrobat", sans-serif;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 43.2px;
+      margin-bottom: 53px;
+      color: var(--color-main);
+      padding-right: 30px;
+      background-color: var(--color-white);
+
+      @media (max-width: 768px) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding-right: 0;
+        padding-bottom: 20px;
+      }
+    }
+
+    &__desc {
+      margin: 0;
+      max-width: 238px;
+      line-height: 26px;
+
+      @media (max-width: 768px) {
+        max-width: 100%;
+        padding-left: 58px;
+        padding-top: 8px;
+      }
+    }
+  }
+}
