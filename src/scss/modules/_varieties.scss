@@ -13,6 +13,21 @@
 
   &__title {
     margin-bottom: 51px;
+
+    &--offset {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__desc {
+    margin: 0;
+    margin-bottom: 50px;
+    line-height: 25.6px;
+    max-width: 700px;
+
+    @media (max-width: 576px) {
+      margin-bottom: 30px;
+    }
   }
 
   &-item {
@@ -57,7 +72,7 @@
       max-width: 940px;
       line-height: 25.8px;
       margin-bottom: 52px;
-      padding-top: 3px;
+      padding-top: 1px;
 
       @media (max-width: 1024px) {
         padding-top: 0;

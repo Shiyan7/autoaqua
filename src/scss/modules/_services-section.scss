@@ -68,7 +68,7 @@
   }
 }
 
-.service-item {
+.services-item {
   position: relative;
   padding: 40px;
   height: 570px;
@@ -91,11 +91,11 @@
       background-color: rgba(#2e4d99, 0.95);
     }
 
-    .service-item__content {
+    .services-item__content {
       transform: translateY(0px);
     }
 
-    .service-item__link {
+    .services-item__link {
       opacity: 1;
       visibility: visible;
     }
