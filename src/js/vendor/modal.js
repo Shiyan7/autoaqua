@@ -74,7 +74,7 @@ export class Modal {
 
   }
 
-  open(selector) {
+  open(selector, animation = this.animation) {
     this.previousActiveElement = document.activeElement;
 
     if (this.isOpen) {
@@ -100,7 +100,7 @@ export class Modal {
     this.disableScroll();
 
     this.modalContainer.classList.add('modal-open');
-    this.modalContainer.classList.add(this.animation);
+    this.modalContainer.classList.add(animation);
 
     setTimeout(() => {
       this.options.isOpen(this);

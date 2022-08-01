@@ -1,7 +1,8 @@
 import {validateForms} from "../functions/validate-forms";
 import {Modal} from '../vendor/modal';
+import vars from '../_vars';
 
-const defaultErrorMessage = '*это поле обязательно к заполнению'
+const {errorMessage} = vars
 
 const modal = new Modal()
 
@@ -11,7 +12,7 @@ const rules = [
     rules: [
       {
         rule: 'required',
-        errorMessage: defaultErrorMessage
+        errorMessage: errorMessage
       }
     ]
   },
@@ -21,18 +22,14 @@ const rules = [
     rules: [
       {
         rule: 'required',
-        errorMessage: defaultErrorMessage
+        errorMessage: errorMessage
       },
     ]
   },
 ]
 
 const onSuccess = () => {
-  modal.open()
+  modal.open('thank', 'fade')
 }
 
-const onFail = () => {
-  modal.close()
-}
-
-validateForms("#questions-form", rules, onSuccess, onFail)
+document.addEventListener("DOMContentLoaded", () => validateForms('#questions-form', rules, onSuccess))
