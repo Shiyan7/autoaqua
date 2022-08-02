@@ -225,6 +225,16 @@
     height: 24px;
     transition: transform 0.3s;
 
+    &.modal__close--offset {
+      top: auto;
+      transform: translateY(-1px);
+
+      @media (max-width: 1024px) {
+        top: initial;
+        transform: translateX(0);
+      }
+    }
+
     @media (max-width: 576px) {
       top: 30px;
       right: 20px;
