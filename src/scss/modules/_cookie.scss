@@ -60,7 +60,7 @@
     padding-left: 0;
     padding-right: 0;
     justify-content: center;
-    min-width: 360px;
+    min-width: var(--min-width);
 
     @media (max-width: 768px) {
       min-width: 100%;
