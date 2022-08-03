@@ -3,7 +3,7 @@
 
   &__container {
     padding-bottom: 123px;
-    padding-left: max(15px, calc((100% - var(--content-width)) / 2));
+    padding-left: max(50px, calc((100% - var(--content-width)) / 2));
 
     @media (max-width: 1024px) {
       padding: 0 var(--container-offset) 90px;
@@ -117,7 +117,6 @@
     display: inline-block;
     padding: 35px 37px 40px 40px;
     border: 1px solid var(--color-porcelain);
-    cursor: pointer;
 
     @media (max-width: 576px) {
       padding: 30px;
