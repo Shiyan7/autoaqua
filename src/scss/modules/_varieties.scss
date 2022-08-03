@@ -85,6 +85,7 @@
       width: 580px;
       height: 300px;
       object-fit: cover;
+      background-color: var(--color-porcelain);
 
       @media (max-width: 768px) {
         width: 100%;

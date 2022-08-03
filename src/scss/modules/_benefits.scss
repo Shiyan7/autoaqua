@@ -24,6 +24,10 @@
       border-top: 1px solid var(--color-porcelain);
       gap: 0;
     }
+
+    @media (max-width: 360px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &-item {
@@ -43,6 +47,10 @@
       border-top: none;
       &:not(:nth-child(2n)) {
         border-right: none;
+
+        @media (max-width: 360px) {
+          border-right: 1px solid var(--color-porcelain);
+        }
       }
     }
 

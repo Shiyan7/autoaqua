@@ -192,6 +192,10 @@
       margin-top: 50px;
     }
 
+    @media (max-width: 360px) {
+      margin-top: 90px;
+    }
+
     &__image {
       display: block;
       position: absolute;
@@ -230,8 +234,8 @@
       }
 
       @media (max-width: 360px) {
-        width: 200px;
-        height: 277px;
+        width: 192px;
+        height: 273px;
       }
     }
 

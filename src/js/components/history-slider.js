@@ -4,6 +4,7 @@ new Swiper('.history-slider', {
   modules: [Navigation, Scrollbar],
   slidesPerView: 'auto',
   slideToClickedSlide: true,
+  grabCursor: true,
   breakpoints: {
     577: {
       spaceBetween: 20
