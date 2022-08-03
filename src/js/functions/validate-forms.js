@@ -6,7 +6,6 @@ export const validateForms = (selector, rules, onSuccess, onFail) => {
   const telSelector = form?.querySelector('.mask-input');
 
   if (!form) {
-    console.error('Нет такого селектора!');
     return false;
   }
 

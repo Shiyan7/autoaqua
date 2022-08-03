@@ -228,11 +228,6 @@
     &.modal__close--offset {
       top: auto;
       transform: translateY(-1px);
-
-      @media (max-width: 1024px) {
-        top: initial;
-        transform: translateX(0);
-      }
     }
 
     @media (max-width: 576px) {
