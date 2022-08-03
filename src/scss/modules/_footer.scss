@@ -32,6 +32,12 @@
         margin-bottom: 50px;
       }
     }
+
+    @media (max-width: 1024px) {
+      &:last-child {
+        grid-area: 2;
+      }
+    }
   }
 
   &__top {
