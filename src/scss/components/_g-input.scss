@@ -45,6 +45,11 @@
     color: var(--color-text);
     padding: 25px 35px;
 
+    @media (max-width: 360px) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
     &.is-invalid {
       border-color: var(--color-red);
     }

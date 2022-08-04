@@ -109,6 +109,15 @@
       &:not(:last-child) {
         margin-bottom: 21px;
       }
+
+      p {
+        margin: 0;
+        line-height: 26px;
+
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+      }
     }
   }
 
