@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    let center = [55.776109, 37.774861];
+    let center = [55.77698061766332, 37.75570469131539];
 
     function init() {
         let map = new ymaps.Map('map', {
