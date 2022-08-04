@@ -58,6 +58,10 @@
       gap: 0;
       grid-template-columns: 1fr;
     }
+
+    @media (max-width: 450px) {
+      gap: 30px;
+    }
   }
 
   &-item {
@@ -71,6 +75,11 @@
       @media (max-width: 768px) {
         padding-bottom: 20px;
         margin-bottom: 10px;
+      }
+
+      @media (max-width: 450px) {
+        padding-bottom: 0;
+        margin-bottom: 0;
       }
 
       &:after {
