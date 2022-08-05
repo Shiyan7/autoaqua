@@ -3,7 +3,7 @@ import Swiper, { Navigation, Pagination, Scrollbar, Autoplay } from 'swiper';
 new Swiper('.hero-slider', {
   modules: [Navigation, Pagination, Scrollbar, Autoplay],
   autoplay: {
-    delay: 2500
+    delay: 5000
   },
   navigation: {
     prevEl: '.hero-slider__btn--prev',
