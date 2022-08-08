@@ -38,6 +38,10 @@
         grid-area: 2;
       }
     }
+
+    @media (max-width: 576px) {
+      width: 100%;
+    }
   }
 
   &__top {
