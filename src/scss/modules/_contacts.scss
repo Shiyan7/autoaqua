@@ -37,6 +37,11 @@
   &__item {
     margin-top: 30px;
 
+    .contact-item__caption,
+    .contact-item__value {
+      white-space: normal;
+    }
+
     &:not(:last-child) {
       margin-right: 30px;
     }
