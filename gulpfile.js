@@ -183,7 +183,7 @@ const scriptsBackend = () => {
               presets: [
                 ['@babel/preset-env', {
                   targets: "defaults"
-                }]
+                }, 'es2015']
               ]
             }
           }

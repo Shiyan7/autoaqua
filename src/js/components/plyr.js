@@ -1,5 +1,7 @@
-import Plyr from "plyr/dist/plyr";
+import Plyr from "../vendor/plyr";
 import {Modal} from '../vendor/modal'
+
+console.log(Plyr);
 
 document.addEventListener("DOMContentLoaded", () => {
   const players = document.querySelectorAll(".player")
