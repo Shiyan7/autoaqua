@@ -88,6 +88,7 @@
     padding: 15px 30px;
     line-height: 25.6px;
     color: var(--color-main);
+    text-align: center;
     transition: color 0.3s, background-color 0.3s;
 
     &:not(.tabs__nav-btn--active) {
